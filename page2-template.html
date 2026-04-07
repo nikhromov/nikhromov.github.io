@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════════
+       PAGE PROPERTIES
+       ─────────────────────────────────────────
+       main_tag:     challenges_cto-tech-debt
+       related_tags: challenges_cto-architecture-gap
+                     challenges_cto-team-scaling
+                     services_it-development
+                     services_business-consulting
+                     practicum_seminars
+                     blog_it-systems-cost
+  ════════════════════════════════════════════ -->
+
+  <!-- SEO -->
+  <title>Tech debt is becoming a real business risk | VVVVVV</title>
+  <meta name="description" content="Your team keeps shipping features but the product feels more fragile with every release. A practical guide to recognising and managing tech debt before it breaks the business." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vvvvvv.si/challenges/cto/tech-debt" />
+
+  <!-- OG -->
+  <meta property="og:title" content="Tech debt is becoming a real business risk" />
+  <meta property="og:description" content="Your team keeps shipping features but the product feels more fragile with every release." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://vvvvvv.si/challenges/cto/tech-debt" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1e2d5a; background: #eeeef2; }
+
+    /* ── Page wrapper ── */
+    .page {
+      background: #fff;
+      border-bottom: 0.5px solid #e4e8f0;
+    }
+
+    .page-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 150px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* When sidebar is empty — full width */
+    .page-inner.no-sidebar {
+      grid-template-columns: 1fr;
+    }
+
+    /* ══════════════════════════════
+       2.1  MAIN CONTENT
+    ══════════════════════════════ */
+    .main-content {}
+
+    /* breadcrumb */
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: 11px;
+      color: #a0aabe;
+      margin-bottom: 1.75rem;
+    }
+
+    .breadcrumb a {
+      color: #a0aabe;
+      text-decoration: none;
+      transition: color .15s;
+    }
+
+    .breadcrumb a:hover { color: #3d5a99; }
+
+    .breadcrumb-sep {
+      color: #c8d0e8;
+      font-size: 10px;
+    }
+
+    .breadcrumb-current { color: #7a8ab0; }
+
+    /* role tag */
+    .page-role {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #3d5a99;
+      background: #eef1f9;
+      border-radius: 4px;
+      padding: 3px 8px;
+      margin-bottom: 1rem;
+    }
+
+    /* title */
+    .page-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: #1e2d5a;
+      margin-bottom: 1rem;
+    }
+
+    /* short description */
+    .page-short-desc {
+      font-size: 14px;
+      color: #7a8ab0;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 0.5px solid #e4e8f0;
+    }
+
+    /* detailed description */
+    .page-body {
+      font-size: 13px;
+      color: #4a5a80;
+      line-height: 1.8;
+    }
+
+    .page-body h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #1e2d5a;
+      margin: 2rem 0 .75rem;
+    }
+
+    .page-body h3 {
+      font-size: 13px;
+      font-weight: 500;
+      color: #1e2d5a;
+      letter-spacing: .02em;
+      margin: 1.5rem 0 .5rem;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #a0aabe;
+    }
+
+    .page-body p { margin-bottom: 1rem; }
+    .page-body p:last-child { margin-bottom: 0; }
+
+    .page-body ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+      margin-bottom: 1rem;
+    }
+
+    .page-body ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+    }
+
+    .page-body ul li::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #a0aabe;
+      margin-top: .6em;
+      flex-shrink: 0;
+    }
+
+    .page-body strong {
+      color: #1e2d5a;
+      font-weight: 500;
+    }
+
+    .page-body a {
+      color: #3d5a99;
+      text-decoration: none;
+      border-bottom: 1px solid #c8d4ea;
+      transition: color .15s, border-color .15s;
+    }
+
+    .page-body a:hover {
+      color: #2e5bbc;
+      border-color: #3d5a99;
+    }
+
+
+    /* ══════════════════════════════
+       2.2  RIGHT SIDEBAR
+    ══════════════════════════════ */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .sidebar-heading {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aabe;
+      margin-bottom: 1.25rem;
+    }
+
+    .sidebar-group {}
+
+    .sidebar-group-label {
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #c8d0e8;
+      margin-bottom: .5rem;
+    }
+
+    .sidebar-links {
+      display: flex;
+      flex-direction: column;
+      gap: .35rem;
+    }
+
+    .sidebar-link {
+      font-size: 12px;
+      color: #7a8ab0;
+      text-decoration: none;
+      line-height: 1.45;
+      transition: color .15s;
+    }
+
+    .sidebar-link:hover { color: #3d5a99; }
+
+    .sidebar-more {
+      font-size: 11px;
+      color: #a0aabe;
+      text-decoration: none;
+      margin-top: .25rem;
+      display: inline-block;
+      transition: color .15s;
+    }
+
+    .sidebar-more:hover { color: #3d5a99; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .page-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+      }
+
+      .sidebar {
+        padding-top: 1.5rem;
+        border-top: 0.5px solid #e4e8f0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <div class="page-inner" id="page-inner">
+
+    <!-- ══════════════════════════════════════
+         2.1  MAIN CONTENT
+    ══════════════════════════════════════ -->
+    <main class="main-content">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="/">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="/challenges">Challenges</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="/challenges/cto">CTO</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Tech debt</span>
+      </nav>
+
+      <!-- Role tag -->
+      <span class="page-role">CTO</span>
+
+      <!-- Title [string] -->
+      <h1 class="page-title">
+        Your team keeps shipping features but the product feels more fragile with every release
+      </h1>
+
+      <!-- Short description [textarea] -->
+      <p class="page-short-desc">
+        Tech debt is rarely a technical problem. It's a business problem with a technical shape. Left unaddressed, it slows your team, erodes trust with stakeholders, and eventually creates the kind of outage that ends careers.
+      </p>
+
+      <!-- Detailed description [HTML] -->
+      <div class="page-body">
+
+        <h2>What's actually happening</h2>
+        <p>
+          The symptoms are familiar: every new feature takes longer than expected, small bugs keep reappearing in production, your engineers are reluctant to touch certain parts of the codebase, and onboarding a new developer feels like handing them a map of a city that no longer exists.
+        </p>
+        <p>
+          What you're describing is <strong>accumulated technical debt</strong> — shortcuts taken under time pressure, architectural decisions that made sense two years ago but don't anymore, and a test coverage that tells you everything is fine right up until it isn't.
+        </p>
+
+        <h2>Why it keeps growing</h2>
+        <p>
+          The core tension is that tech debt is invisible to everyone except your engineers — until it becomes very visible to everyone. Stakeholders see only velocity and features. The business rewards shipping. So debt accumulates quietly until a release goes wrong, a key engineer burns out, or a competitor ships in a week what takes your team a month.
+        </p>
+
+        <h3>Common patterns we see</h3>
+        <ul>
+          <li>No agreed definition of "done" that includes refactoring and documentation</li>
+          <li>Debt is acknowledged in retrospectives but never prioritised in the roadmap</li>
+          <li>Engineers feel ownership of quality but have no mandate to act on it</li>
+          <li>The codebase has grown faster than the team's understanding of it</li>
+        </ul>
+
+        <h2>What we do about it</h2>
+        <p>
+          We don't believe in big-bang rewrites. We help CTOs build a <strong>sustainable cadence</strong> — a rhythm where quality work and feature work coexist, where tech debt is visible on the roadmap, and where engineers feel both accountable and empowered.
+        </p>
+        <p>
+          The work starts with a structured audit of your current codebase health, team workflows, and how technical decisions get made. From that we build a prioritised debt reduction plan that fits inside your existing sprint structure — not alongside it.
+        </p>
+        <p>
+          If this situation sounds familiar, <a href="/contact">let's have a conversation</a>.
+        </p>
+
+      </div>
+    </main>
+
+
+    <!-- ══════════════════════════════════════
+         2.2  RIGHT SIDEBAR
+         (built by JS from page tags)
+    ══════════════════════════════════════ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-heading" id="sidebar-heading" style="display:none">Related</div>
+    </aside>
+
+  </div>
+</div>
+
+<script>
+  /*
+   * PAGE TAGS
+   * main_tag:     the unique identifier of this page
+   * related_tags: tags of other pages this page links to
+   */
+  const PAGE = {
+    main_tag: 'challenges_cto-tech-debt',
+    related_tags: [
+      'challenges_cto-architecture-gap',
+      'challenges_cto-team-scaling',
+      'services_it-development',
+      'services_business-consulting',
+      'practicum_seminars',
+      'blog_it-systems-cost',
+    ]
+  };
+
+  /*
+   * TAG REGISTRY
+   * In a real CMS this would come from an API.
+   * Here it's a flat lookup: tag → { title, url }
+   */
+  const TAG_REGISTRY = {
+    // challenges
+    'challenges_cto-tech-debt':          { title: 'Tech debt as a business risk',                    url: '/challenges/cto/tech-debt' },
+    'challenges_cto-architecture-gap':   { title: 'Architecture can\'t support growth targets',      url: '/challenges/cto/architecture-gap' },
+    'challenges_cto-team-scaling':       { title: 'Scaling engineering team 8 → 25',                 url: '/challenges/cto/team-scaling' },
+    'challenges_ceo-operational-trap':   { title: 'Stuck in operational mode',                       url: '/challenges/ceo-micro-company/operational-trap' },
+    'challenges_hr-turnover':            { title: 'Turnover keeps spiking in one department',        url: '/challenges/hr/turnover' },
+    // services
+    'services_it-development':           { title: 'IT & Development',                                url: '/services/it-development' },
+    'services_business-consulting':      { title: 'Business Consulting',                             url: '/services/business-consulting' },
+    'services_marketing':                { title: 'Marketing',                                       url: '/services/marketing' },
+    // free-app-tests
+    'free-app-tests_app1':               { title: 'App 1',                                           url: '/tests/app1' },
+    'free-app-tests_app2':               { title: 'App 2',                                           url: '/tests/app2' },
+    // business-club
+    'business-club_peer-partnership':    { title: 'Peer-to-peer partnership',                        url: '/club/peer-partnership' },
+    'business-club_marketplace':         { title: 'Solutions Marketplace',                           url: '/club/marketplace' },
+    // practicum
+    'practicum_webinars-30min':          { title: 'Free 30-min webinars',                            url: '/practicum/webinars-30min' },
+    'practicum_seminars':                { title: 'From 3 to 5 hour seminars',                       url: '/practicum/seminars' },
+    'practicum_long-term':               { title: 'Long-term programs',                              url: '/practicum/long-term' },
+    // blog
+    'blog_it-systems-cost':              { title: 'The IT systems that quietly cost you money',      url: '/blog/it-systems-cost' },
+    'blog_leaders-scale':                { title: 'What separates leaders who scale',                url: '/blog/leaders-scale' },
+  };
+
+  /*
+   * SIDEBAR SECTIONS config
+   * prefix → { label, section_url }
+   */
+  const SIDEBAR_SECTIONS = [
+    { prefix: 'challenges_',     label: 'Related challenges', url: '/challenges' },
+    { prefix: 'services_',       label: 'Services',           url: '/services' },
+    { prefix: 'free-app-tests_', label: 'Free tests',         url: '/tests' },
+    { prefix: 'business-club_',  label: 'Business Club',      url: '/club' },
+    { prefix: 'practicum_',      label: 'Practicum',          url: '/practicum' },
+    { prefix: 'blog_',           label: 'Blog',               url: '/blog' },
+  ];
+
+  const MAX_PER_SECTION = 3;
+
+  function buildSidebar() {
+    const sidebar  = document.getElementById('sidebar');
+    const pageInner = document.getElementById('page-inner');
+    let hasAny = false;
+
+    SIDEBAR_SECTIONS.forEach(section => {
+      // Find related tags matching this prefix (exclude own main_tag)
+      const matches = PAGE.related_tags.filter(tag =>
+        tag.startsWith(section.prefix) && tag !== PAGE.main_tag
+      );
+      if (!matches.length) return;
+
+      hasAny = true;
+      const group = document.createElement('div');
+      group.className = 'sidebar-group';
+
+      const label = document.createElement('div');
+      label.className = 'sidebar-group-label';
+      label.textContent = section.label;
+      group.appendChild(label);
+
+      const links = document.createElement('div');
+      links.className = 'sidebar-links';
+
+      const visible = matches.slice(0, MAX_PER_SECTION);
+      visible.forEach(tag => {
+        const entry = TAG_REGISTRY[tag];
+        if (!entry) return;
+        const a = document.createElement('a');
+        a.className = 'sidebar-link';
+        a.href = entry.url;
+        a.textContent = entry.title;
+        links.appendChild(a);
+      });
+
+      group.appendChild(links);
+
+      if (matches.length > MAX_PER_SECTION) {
+        const more = document.createElement('a');
+        more.className = 'sidebar-more';
+        more.href = section.url;
+        more.textContent = 'More →';
+        group.appendChild(more);
+      }
+
+      sidebar.appendChild(group);
+    });
+
+    // If nothing found — collapse sidebar, expand content
+    if (!hasAny) {
+      sidebar.style.display = 'none';
+      pageInner.classList.add('no-sidebar');
+    } else {
+      document.getElementById('sidebar-heading').style.display = 'block';
+    }
+  }
+
+  buildSidebar();
+</script>
+
+</body>
+</html>

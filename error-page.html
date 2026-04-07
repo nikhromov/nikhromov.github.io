@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found | VVVVVV</title>
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: #eeeef2; color: #1e2d5a; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* ── Error page wrapper ── */
+    .error-page {
+      flex: 1;
+      background: #fff;
+      border-bottom: 0.5px solid #e4e8f0;
+      display: flex;
+      align-items: center;
+    }
+
+    .error-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* ── Left: code + message ── */
+    .error-left {}
+
+    .error-code {
+      font-family: 'DM Serif Display', serif;
+      font-size: 80px;
+      line-height: 1;
+      color: #e4e8f0;
+      margin-bottom: 1.5rem;
+      letter-spacing: -.02em;
+    }
+
+    .error-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aabe;
+      margin-bottom: .75rem;
+    }
+
+    .error-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #1e2d5a;
+      line-height: 1.35;
+      margin-bottom: .75rem;
+    }
+
+    .error-desc {
+      font-size: 13px;
+      color: #7a8ab0;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .error-back {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: 13px;
+      font-weight: 500;
+      color: #3d5a99;
+      text-decoration: none;
+      border-bottom: 1px solid #c8d4ea;
+      padding-bottom: 1px;
+      transition: color .15s, border-color .15s;
+    }
+
+    .error-back:hover {
+      color: #2e5bbc;
+      border-color: #3d5a99;
+    }
+
+    /* ── Right: helpful links ── */
+    .error-right {}
+
+    .error-nav-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #c0c8dc;
+      margin-bottom: 1rem;
+    }
+
+    .error-nav {
+      display: flex;
+      flex-direction: column;
+      border: 0.5px solid #e4e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .error-nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .85rem 1.25rem;
+      border-bottom: 0.5px solid #e4e8f0;
+      text-decoration: none;
+      transition: background .12s;
+    }
+
+    .error-nav-item:last-child { border-bottom: none; }
+    .error-nav-item:hover { background: #f5f7fd; }
+    .error-nav-item:hover .error-nav-title { color: #2e5bbc; }
+    .error-nav-item:hover .error-nav-arrow { color: #3d5a99; transform: translateX(3px); }
+
+    .error-nav-title {
+      font-size: 13px;
+      color: #4a5a80;
+      transition: color .15s;
+    }
+
+    .error-nav-arrow {
+      color: #c8d0e8;
+      transition: color .15s, transform .15s;
+    }
+
+    @media (max-width: 768px) {
+      .error-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; }
+      .error-code { font-size: 56px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="error-page">
+  <div class="error-inner">
+
+    <!-- Left -->
+    <div class="error-left">
+      <div class="error-code" id="error-code">404</div>
+      <div class="error-label" id="error-label">Page not found</div>
+      <h1 class="error-title" id="error-title">This page doesn't exist or has been moved.</h1>
+      <p class="error-desc" id="error-desc">The link you followed may be outdated, mistyped, or the page may have been removed.</p>
+      <a href="/" class="error-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Back to homepage
+      </a>
+    </div>
+
+    <!-- Right: helpful links -->
+    <div class="error-right">
+      <div class="error-nav-label">You might be looking for</div>
+      <nav class="error-nav">
+        <a href="/challenges" class="error-nav-item">
+          <span class="error-nav-title">Challenges</span>
+          <svg class="error-nav-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/services" class="error-nav-item">
+          <span class="error-nav-title">Services</span>
+          <svg class="error-nav-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/blog" class="error-nav-item">
+          <span class="error-nav-title">Blog</span>
+          <svg class="error-nav-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/practicum" class="error-nav-item">
+          <span class="error-nav-title">Practicum</span>
+          <svg class="error-nav-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/contact" class="error-nav-item">
+          <span class="error-nav-title">Contact us</span>
+          <svg class="error-nav-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </nav>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  /*
+   * To use for different error types, pass ?error=500 (or 403, 503)
+   * or set window.ERROR_CODE before this script.
+   */
+  const ERRORS = {
+    404: {
+      code:  '404',
+      label: 'Page not found',
+      title: 'This page doesn\'t exist or has been moved.',
+      desc:  'The link you followed may be outdated, mistyped, or the page may have been removed.',
+    },
+    403: {
+      code:  '403',
+      label: 'Access denied',
+      title: 'You don\'t have permission to view this page.',
+      desc:  'This page is restricted. If you believe this is a mistake, please contact us.',
+    },
+    500: {
+      code:  '500',
+      label: 'Server error',
+      title: 'Something went wrong on our end.',
+      desc:  'We\'re aware of the issue and working to fix it. Please try again in a few minutes.',
+    },
+    503: {
+      code:  '503',
+      label: 'Maintenance',
+      title: 'We\'ll be back shortly.',
+      desc:  'The site is temporarily down for scheduled maintenance. Thank you for your patience.',
+    },
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const code   = window.ERROR_CODE || params.get('error') || 404;
+  const error  = ERRORS[code] || ERRORS[404];
+
+  document.title = `${error.label} | VVVVVV`;
+  document.getElementById('error-code').textContent  = error.code;
+  document.getElementById('error-label').textContent = error.label;
+  document.getElementById('error-title').textContent = error.title;
+  document.getElementById('error-desc').textContent  = error.desc;
+</script>
+
+</body>
+</html>
