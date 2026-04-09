@@ -1,56 +1,2277 @@
-<style>
-@font-face {
-  font-family: 'DM Sans';
-  font-weight: 300;
-  font-style: normal;
-  src: url('/fonts/dm-sans-latin-300-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'DM Sans';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/fonts/dm-sans-latin-400-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'DM Sans';
-  font-weight: 500;
-  font-style: normal;
-  src: url('/fonts/dm-sans-latin-500-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'DM Serif Display';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/fonts/dm-serif-display-latin-400-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'DM Serif Display';
-  font-weight: 400;
-  font-style: italic;
-  src: url('/fonts/dm-serif-display-latin-400-italic.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/fonts/inter-latin-400-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Inter';
-  font-weight: 500;
-  font-style: normal;
-  src: url('/fonts/inter-latin-500-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Outfit';
-  font-weight: 300;
-  font-style: normal;
-  src: url('/fonts/outfit-latin-300-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Outfit';
-  font-weight: 400;
-  font-style: normal;
-  src: url('/fonts/outfit-latin-400-normal.woff2') format('woff2');
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VVVVVV — Business Consulting &amp; IT</title>
+  <meta name="description" content="From family business owners to enterprise CEOs — tailored strategies, technology, and mentoring that drive real results." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vvvvvv.si/" />
+  <meta property="og:title" content="VVVVVV — Business Consulting &amp; IT" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vvvvvv.si/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500&family=Outfit:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+
+    /* ══ GLOBAL OVERRIDES ══ */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: #eeeef2; color: #1e2d5a; }
+
+    /* Unified section labels */
+    .sec-label {
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 13px !important;
+      font-weight: 500 !important;
+      letter-spacing: 2px !important;
+      text-transform: uppercase !important;
+      color: #7a8ab0 !important;
+      margin-bottom: 1rem !important;
+    }
+
+    /* Reduced section inner padding */
+    .challenges, .services, .free-tests-inner,
+    .club-inner, .practicum-inner, .clients-inner,
+    .blog-inner, .why-us-inner {
+      padding-top: 2.5rem !important;
+      padding-bottom: 2.5rem !important;
+    }
+
+/* ── header ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #fff;
+      color: #1e2d5a;
+    }
+
+    /* ── LANGUAGE CAPSULE ── */
+    .lang-capsule { display: inline-flex; align-items: center; border: 1px solid #dde2ee; border-radius: 8px; overflow: visible; background: #fff; position: relative; }
+    .lang-en { font-size: 12px; font-weight: 500; padding: 5px 11px; background: #3d5a99; color: #fff; border-radius: 6px; margin: 2px; cursor: pointer; }
+    .lang-si { font-size: 12px; color: #4a5a80; padding: 5px 9px; cursor: pointer; }
+    .lang-si:hover { color: #1e2d5a; }
+    .lang-sep { width: 1px; height: 16px; background: #dde2ee; flex-shrink: 0; }
+    .lang-globe-btn { display: flex; align-items: center; justify-content: center; padding: 5px 9px; color: #4a5a80; cursor: pointer; position: relative; }
+    .lang-globe-btn:hover { color: #1e2d5a; }
+    .lang-dropdown { display: none; position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid #dde2ee; border-radius: 8px; min-width: 160px; z-index: 200; padding: 4px; }
+    .lang-dropdown.open { display: block; }
+    .lang-dropdown a { display: block; font-size: 13px; color: #4a5a80; padding: 8px 12px; border-radius: 5px; cursor: pointer; text-decoration: none; }
+    .lang-dropdown a:hover { background: #f0f3fa; color: #1e2d5a; }
+    .lang-dropdown a.active { font-weight: 500; color: #1e2d5a; }
+
+    /* Mobile single lang button */
+    .lang-single { display: inline-flex; align-items: center; border: 1px solid #dde2ee; border-radius: 8px; background: #fff; cursor: pointer; position: relative; }
+    .lang-single-inner { font-size: 12px; font-weight: 500; padding: 5px 11px; background: #3d5a99; color: #fff; border-radius: 6px; margin: 2px; }
+    .lang-single-dropdown { display: none; position: absolute; top: calc(100% + 6px); right: 0; background: #fff; border: 1px solid #dde2ee; border-radius: 8px; min-width: 160px; z-index: 200; padding: 4px; }
+    .lang-single-dropdown.open { display: block; }
+    .lang-single-dropdown a { display: block; font-size: 13px; color: #4a5a80; padding: 8px 12px; border-radius: 5px; cursor: pointer; text-decoration: none; }
+    .lang-single-dropdown a:hover { background: #f0f3fa; color: #1e2d5a; }
+    .lang-single-dropdown a.active { font-weight: 500; color: #1e2d5a; }
+
+    /* ── DESKTOP HEADER ── */
+    .dsk { display: flex; align-items: center; height: 56px; padding: 0 2rem; border-bottom: 0.5px solid #e4e8f0; background: #fff; position: sticky; top: 0; z-index: 100; }
+    .dsk-inner { display: flex; align-items: center; width: 100%; max-width: 960px; margin: 0 auto; }
+    .dsk-logo { display: flex; flex-direction: column; line-height: 1; width: 130px; flex-shrink: 0; }
+    .dsk-logo-name { font-family: 'DM Serif Display', serif; font-size: 20px; letter-spacing: 4px; color: #1e2d5a; }
+    .dsk-logo-since { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #a0aabe; margin-top: 3px; }
+    .dsk-nav { flex: 1; display: flex; align-items: center; justify-content: center; gap: 2px; }
+    .dsk-nav a { font-size: 13px; color: #4a5a80; padding: 6px 10px; border-radius: 6px; cursor: pointer; white-space: nowrap; text-decoration: none; }
+    .dsk-nav a:hover { color: #1e2d5a; background: #f0f3fa; }
+    .dsk-nav a.active { color: #1e2d5a; font-weight: 500; background: #e8edf8; }
+
+    /* ── NAV DROPDOWNS ── */
+    .dsk-nav .has-dropdown { position: relative; }
+    .dsk-nav .has-dropdown > a { display: flex; align-items: center; gap: 4px; }
+    .dsk-nav .has-dropdown > a::after { content: ""; display: block; width: 0; height: 0; border-left: 3.5px solid transparent; border-right: 3.5px solid transparent; border-top: 4px solid #a0aabe; margin-top: 1px; flex-shrink: 0; }
+    .nav-dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid #e4e8f0; border-radius: 8px; min-width: 200px; z-index: 300; padding: 4px; padding-top: 10px; margin-top: 0; }
+    .has-dropdown:hover .nav-dropdown { display: block; }
+    .nav-dropdown a { display: block; font-size: 13px; color: #4a5a80; padding: 8px 12px; border-radius: 5px; text-decoration: none; white-space: nowrap; }
+    .nav-dropdown a:hover { background: #f0f3fa; color: #1e2d5a; }
+    /* iPad/tablet: dropdown via .open class (touch devices without hover) */
+    @media (hover: none) and (pointer: coarse) and (min-width: 768px) {
+      .has-dropdown:hover .nav-dropdown { display: none; }
+      .has-dropdown.open .nav-dropdown { display: block; }
+    }
+
+    .dsk-tooltip-wrap { position: relative; }
+    .dsk-tooltip {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e2d5a;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 400;
+      white-space: nowrap;
+      padding: 4px 9px;
+      border-radius: 5px;
+      pointer-events: none;
+      z-index: 300;
+    }
+    .dsk-tooltip::before {
+      content: '';
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 4px solid transparent;
+      border-bottom-color: #1e2d5a;
+    }
+    .dsk-tooltip-wrap:hover .dsk-tooltip { display: block; }
+    .dsk-icon { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #7a8aaa; cursor: pointer; border-radius: 5px; }
+    .dsk-icon:hover { color: #1e2d5a; }
+    .dsk-right { flex-shrink: 0; display: flex; align-items: center; justify-content: flex-end; gap: 4px; }
+
+    /* ── MOBILE HEADER ── */
+    .mob { display: none; align-items: center; height: 60px; padding: 0 1.25rem; border-bottom: 0.5px solid #e4e8f0; justify-content: space-between; position: sticky; top: 0; z-index: 100; background: #fff; }
+    .mob-logo { display: flex; flex-direction: column; line-height: 1; }
+    .mob-logo-name { font-family: 'DM Serif Display', serif; font-size: 17px; letter-spacing: 3px; color: #1e2d5a; }
+    .mob-logo-since { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: #a0aabe; margin-top: 2px; }
+    .mob-center { position: absolute; left: 50%; transform: translateX(-50%); }
+    .mob-right { display: flex; align-items: center; gap: 8px; }
+    .mob-icon { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; color: #7a8aaa; cursor: pointer; }
+    .mob-icon:hover { color: #1e2d5a; }
+
+    /* ── MOBILE MENU ── */
+    .mob-menu { display: none; flex-direction: column; border-bottom: 0.5px solid #e4e8f0; position: fixed; top: 60px; left: 0; right: 0; z-index: 99; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .mob-menu.open { display: flex; }
+    .mob-menu a { font-size: 14px; color: #4a5a80; padding: 13px 1.5rem; border-bottom: 0.5px solid #f0f3fa; text-align: center; text-decoration: none; }
+    .mob-menu a:hover { background: #f5f7fd; color: #1e2d5a; }
+
+    @media (max-width: 768px) {
+      .dsk { display: none; }
+      .mob { display: flex; }
+    }
+  
+
+/* ── HeroSection ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:             #f5f7fd;
+      --fg:             #0f1c2e;
+      --primary:        #3a5ba0;
+      --muted:          #64748b;
+      --eyebrow:        #94a3b8;
+      --btn-bg:         #2e3f6f;
+      --btn-fg:         #ffffff;
+      --btn2-bg:        #7a94c0;
+      --btn2-fg:        #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      min-height: 100vh;
+    }
+
+    /* ── section ── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    @media (min-width: 768px)  { .container { padding-top: 4rem; padding-bottom: 4rem; } }
+    @media (min-width: 1024px) { .container { padding-top: 5rem; padding-bottom: 5rem; } }
+
+    .content {
+      max-width: 52rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* eyebrow */
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: .7rem;
+      font-weight: 400;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--eyebrow);
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeUp .55s .1s ease forwards;
+    }
+
+    /* headline */
+    .headline {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -.01em;
+      color: var(--fg);
+      opacity: 0;
+      transform: translateY(14px);
+      animation: fadeUp .6s .22s ease forwards;
+    }
+
+    .headline .accent {
+      color: var(--primary);
+      font-style: italic;
+    }
+
+    /* body copy */
+    .body-copy {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 42rem;
+      opacity: 0;
+      transform: translateY(14px);
+      animation: fadeUp .6s .36s ease forwards;
+    }
+
+    /* buttons */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: .75rem;
+      padding-top: 1rem;
+      opacity: 0;
+      transform: translateY(14px);
+      animation: fadeUp .6s .5s ease forwards;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: 1rem 2.2rem;
+      border-radius: .6rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .9375rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--btn-bg);
+      color: var(--btn-fg);
+      border-color: var(--btn-bg);
+    }
+
+    .btn-primary:hover {
+      background: #1e2f55;
+      border-color: #1e2f55;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--btn2-bg);
+      color: var(--btn2-fg);
+      border-color: var(--btn2-bg);
+    }
+
+    .btn-secondary:hover {
+      background: #6680ad;
+      border-color: #6680ad;
+      transform: translateY(-2px);
+    }
+
+    /* arrow icon */
+    .arrow-icon {
+      width: 1rem;
+      height: 1rem;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform .2s ease;
+    }
+
+    .btn-primary:hover .arrow-icon {
+      transform: translateX(3px);
+    }
+
+    /* animation */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  
+
+/* ── privacy-section ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: #eeeef2; }
+
+    .privacy {
+      background: #1a1a1a;
+      width: 100%;
+      padding: .55rem 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .privacy-inner {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Title */
+    .privacy-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      color: #d4c97a;
+      white-space: nowrap;
+    }
+
+    .privacy-arrow-link {
+      display: flex;
+      align-items: center;
+      color: #666;
+      text-decoration: none;
+      transition: color .15s, transform .15s;
+    }
+
+    .privacy-arrow-link:hover { color: #8aaae0; }
+
+    .privacy-arrow {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+
+    /* Horizontal list */
+    .privacy-list {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .privacy-item {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: 12px;
+      color: #999;
+      white-space: nowrap;
+    }
+
+    .privacy-check {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      color: #6e9e5a;
+    }
+
+    .privacy-item s {
+      text-decoration: line-through;
+      text-decoration-color: #777;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .privacy { display: none; }
+    }
+  
+
+/* ── challenges-section ── */
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: #f5f7fd; color: #1e2d5a; }
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
+
+  .challenges-section { background: #fff; border-bottom: 0.5px solid #e4e8f0; }
+  .challenges { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; }
+  .sec-label { font-size: 10px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: #a0aabe; margin-bottom: 1.5rem; }
+
+  .challenges-sublabel {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #a0aabe;
+    margin-bottom: 1rem;
+  }
+  .role { font-size: 12px; padding: 6px 14px; border: 1px solid #c8d0e8; border-radius: 20px; color: #4a5a80; cursor: pointer; text-decoration: none; transition: border-color .15s, color .15s, background .15s; background: #fff; user-select: none; white-space: nowrap; }
+  .roles { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }
+  .role:hover { border-color: #3d5a99; color: #3d5a99; }
+  .role.selected { background: #1e2d5a; border-color: #1e2d5a; color: #fff; display: inline-flex; align-items: center; gap: .45rem; }
+  .role-reset { display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; background: rgba(255,255,255,.2); cursor: pointer; flex-shrink: 0; transition: background .15s; }
+  .role-reset:hover { background: rgba(255,255,255,.4); }
+
+  .contexts { display: none; flex-direction: column; margin-top: 1.25rem; border: 0.5px solid #e4e8f0; border-radius: 10px; overflow: hidden; }
+  .contexts.visible { display: flex; }
+  .context-intro { font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #a0aabe; padding: .9rem 1.5rem; background: #fff; border-bottom: 0.5px solid #e4e8f0; }
+  .context-item { display: flex; align-items: center; gap: 1rem; padding: .95rem 1.5rem; background: #fff; border-bottom: 0.5px solid #e4e8f0; text-decoration: none; cursor: pointer; transition: background .15s; }
+  .context-item:last-child { border-bottom: none; }
+  .context-item:hover { background: #f0f3fa; }
+  .context-item:hover .context-text { color: #1e2d5a; }
+  .context-item:hover .context-arrow { color: #3d5a99; transform: translateX(3px); }
+  .context-item:hover .context-dot { background: #3d5a99; }
+  .context-dot { width: 6px; height: 6px; border-radius: 50%; background: #c8d0e8; flex-shrink: 0; transition: background .15s; }
+  .context-text { font-size: 13px; color: #4a5a80; line-height: 1.5; flex: 1; transition: color .15s; }
+  .context-arrow { color: #c8d0e8; flex-shrink: 0; transition: color .15s, transform .15s; }
+
+  /* Not found text */
+  .context-not-found { display: none; padding: .9rem 1.5rem; background: #fff; border-top: 0.5px solid #e4e8f0; font-size: 12px; color: #7a8ab0; line-height: 1.6; }
+  .contexts.visible .context-not-found { display: block; }
+  .context-not-found a { color: #2e5bbc; text-decoration: none; }
+  .context-not-found a:hover { text-decoration: underline; }
+
+  @media (max-width: 768px) { .challenges { padding: 2rem 1.5rem; } }
+
+
+/* ── services ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: #fff; color: #1e2d5a; }
+
+    .services-section {
+      border-bottom: 0.5px solid #e4e8f0;
+      background: #f5f7fd;
+    }
+
+    .services {
+      padding: 3rem 2rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .sec-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aabe;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .card {
+      padding: 1.25rem;
+      border: 0.5px solid #e4e8f0;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .card-num {
+      font-size: 11px;
+      color: #c0c8dc;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: #1e2d5a;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .card-text {
+      font-size: 12px;
+      color: #7a8ab0;
+      line-height: 1.6;
+    }
+
+    .card-link {
+      text-decoration: none;
+      display: block;
+    }
+
+    .card-link:hover .card-title {
+      color: #2e5bbc;
+    }
+
+    .card-link:hover .card-text {
+      color: #4a5a80;
+    }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .services { padding: 2rem 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  
+
+/* ── free-app-tests ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1e2d5a; background: #eeeef2; }
+
+    .free-tests {
+      background: #fff;
+      border-bottom: 0.5px solid #e4e8f0;
+    }
+
+    .free-tests-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .sec-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aabe;
+      margin-bottom: 2rem;
+    }
+
+    .tests-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .test-card {
+      border: 0.5px solid #e4e8f0;
+      border-radius: 10px;
+      padding: 1.5rem 1.5rem 1.25rem;
+      text-decoration: none;
+      display: block;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .test-card:hover {
+      border-color: #3d5a99;
+    }
+
+    .test-card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #4a8a5a;
+      background: #edf6ee;
+      border-radius: 4px;
+      padding: 3px 8px;
+      margin-bottom: 1rem;
+    }
+
+    .test-card-title {
+      font-size: 15px;
+      font-weight: 500;
+      color: #1e2d5a;
+      margin-bottom: .5rem;
+    }
+
+    .test-card-desc {
+      font-size: 12px;
+      color: #7a8ab0;
+      line-height: 1.6;
+    }
+
+    .test-card-cta {
+      margin-top: 1.25rem;
+      font-size: 11px;
+      font-weight: 500;
+      color: #3d5a99;
+      display: flex;
+      align-items: center;
+      gap: .3rem;
+    }
+
+    @media (max-width: 768px) {
+      .tests-grid { grid-template-columns: 1fr; }
+      .free-tests-inner { padding: 2rem 1.5rem; }
+    }
+  
+
+/* ── business-club ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1e2d5a; background: #eeeef2; }
+
+    .club {
+      background: #f5f7fd;
+      border-bottom: 0.5px solid #e4e8f0;
+    }
+
+    .club-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .club-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .sec-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aabe;
+    }
+
+    .club-tagline {
+      font-size: 13px;
+      color: #7a8ab0;
+      font-weight: 300;
+    }
+
+    .club-items {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      border: 0.5px solid #e4e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .club-item {
+      padding: 1.4rem 1rem 1.25rem;
+      text-decoration: none;
+      border-right: 0.5px solid #e4e8f0;
+      transition: background .15s;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+
+    .club-item:last-child { border-right: none; }
+    .club-item:hover { background: #f0f3fa; }
+
+    .club-item:hover .club-icon { color: #3d5a99; }
+    .club-item:hover .club-item-title { color: #1e2d5a; }
+
+    .club-icon {
+      color: #a0b4d0;
+      transition: color .15s;
+      flex-shrink: 0;
+    }
+
+    .club-item-title {
+      font-size: 12px;
+      font-weight: 400;
+      color: #4a5a80;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .club-items {
+        grid-template-columns: 1fr 1fr;
+      }
+      .club-item {
+        border-right: 0.5px solid #e4e8f0;
+        border-bottom: 0.5px solid #e4e8f0;
+      }
+      .club-item:nth-child(2n) { border-right: none; }
+      .club-item:nth-last-child(-n+2) { border-bottom: none; }
+      .club-inner { padding: 2rem 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .club-items { grid-template-columns: 1fr; }
+      .club-item { border-right: none; }
+      .club-item:last-child { border-bottom: none; }
+    }
+  
+
+/* ── practicum ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1e2d5a; background: #eeeef2; }
+
+    .practicum {
+      background: #fff;
+      border-bottom: 0.5px solid #e4e8f0;
+    }
+
+    .practicum-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .practicum-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .sec-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aabe;
+    }
+
+    .practicum-tagline {
+      font-size: 13px;
+      color: #7a8ab0;
+      font-weight: 300;
+    }
+
+    .practicum-items {
+      display: flex;
+      flex-direction: column;
+      border: 0.5px solid #e4e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .practicum-item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.15rem 1.5rem;
+      border-bottom: 0.5px solid #e4e8f0;
+      text-decoration: none;
+      transition: background .15s;
+    }
+
+    .practicum-item:last-child { border-bottom: none; }
+    .practicum-item:hover { background: #f5f7fd; }
+    .practicum-item:hover .practicum-item-title { color: #1e2d5a; }
+    .practicum-item:hover .practicum-item-arrow { color: #3d5a99; transform: translateX(3px); }
+
+    .p-icon { flex-shrink: 0; }
+
+    .practicum-item-title {
+      font-size: 14px;
+      font-weight: 400;
+      color: #4a5a80;
+      flex: 1;
+      transition: color .15s;
+    }
+
+    .practicum-item-badge {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 20px;
+      flex-shrink: 0;
+    }
+
+    .badge-free { color: #4a8a5a; background: #edf6ee; }
+    .badge-deep { color: #3d5a99; background: #eef1f9; }
+    .badge-pro  { color: #7a4a90; background: #f4eef9; }
+
+    .practicum-item-arrow {
+      color: #c0c8dc;
+      flex-shrink: 0;
+      transition: color .15s, transform .15s;
+    }
+
+    @media (max-width: 768px) {
+      .practicum-inner { padding: 2rem 1.5rem; }
+      .practicum-item { padding: 1rem 1.25rem; }
+    }
+  
+
+/* ── clients ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1e2d5a; background: #eeeef2; }
+
+    .clients {
+      background: #f5f7fd;
+      border-bottom: 0.5px solid #e4e8f0;
+    }
+
+    .clients-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .sec-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .sec-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aabe;
+    }
+
+    .sec-tagline {
+      font-size: 13px;
+      color: #7a8ab0;
+      font-weight: 300;
+    }
+
+    .clients-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      align-items: center;
+    }
+
+    .client-tag {
+      font-size: 13px;
+      font-weight: 400;
+      color: #4a5a80;
+      background: #fff;
+      border: 0.5px solid #dde3f0;
+      border-radius: 6px;
+      padding: .45rem .9rem;
+      white-space: nowrap;
+    }
+
+    .client-tag-etc {
+      font-size: 13px;
+      color: #a0aabe;
+      font-style: italic;
+      padding: .45rem .4rem;
+    }
+
+    .clients-note {
+      margin-top: 1.75rem;
+      font-size: 12px;
+      color: #7a8ab0;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    @media (max-width: 768px) {
+      .clients-inner { padding: 2rem 1.5rem; }
+      .sec-tagline { display: none; }
+    }
+  
+
+/* ── blog ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1e2d5a; background: #eeeef2; }
+
+    .blog {
+      background: #fff;
+      border-bottom: 0.5px solid #e4e8f0;
+    }
+
+    .blog-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .sec-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .sec-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aabe;
+    }
+
+    .sec-tagline {
+      font-size: 13px;
+      color: #7a8ab0;
+      font-weight: 300;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    .blog-card {
+      display: block;
+      text-decoration: none;
+      border: 0.5px solid #e4e8f0;
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: border-color .2s;
+    }
+
+    .blog-card:hover {
+      border-color: #3d5a99;
+    }
+
+    .blog-card:hover .blog-card-title {
+      color: #2e5bbc;
+    }
+
+    .blog-card-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #1e2d5a;
+      line-height: 1.5;
+      transition: color .15s;
+    }
+
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-inner { padding: 2rem 1.5rem; }
+      .sec-tagline { display: none; }
+    }
+  
+
+/* ── why-us ── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; color: #1e2d5a; background: #eeeef2; }
+
+    .why-us {
+      background: #fff;
+      border-bottom: 0.5px solid #e4e8f0;
+    }
+
+    .why-us-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .sec-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aabe;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Intro paragraphs ── */
+    .why-intro {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem;
+      border-bottom: 0.5px solid #e4e8f0;
+      background: #f5f7fd;
+      border-radius: 10px;
+    }
+
+    .why-intro-item {
+      font-size: 13px;
+      color: #4a5a80;
+      line-height: 1.75;
+    }
+
+    .why-intro-item strong {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a0aabe;
+      margin-bottom: .6rem;
+    }
+
+    /* ── Approaches ── */
+    .why-approaches {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 0.5px solid #e4e8f0;
+    }
+    .why-sub-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a0aabe;
+      margin-bottom: 1.25rem;
+    }
+    .approaches-row {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .approach-vs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 .75rem;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #c0c8dc;
+    }
+    .approach {
+      padding: 1.25rem;
+      background: #f5f7fd;
+      border: 1.5px solid #e4e8f0;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      user-select: none;
+    }
+    .approach:hover { border-color: #3d5a99; background: #eef1f9; }
+    .approach.selected { border-color: #1e2d5a; background: #e8edf8; }
+    .approach.selected .approach-num { color: #1e2d5a; }
+    .approach.selected .approach-text { color: #1e2d5a; }
+    .approach-num {
+      font-size: 22px;
+      font-weight: 300;
+      color: #c0c8dc;
+      line-height: 1;
+      font-family: 'DM Serif Display', serif;
+      transition: color .2s;
+    }
+    .approach-text {
+      font-size: 13px;
+      color: #4a5a80;
+      line-height: 1.6;
+      transition: color .2s;
+    }
+    @media (max-width: 768px) { .approaches-row { grid-template-columns: 1fr; } .approach-vs { padding: .4rem 0; font-size: 9px; text-align: center; } }
+
+    /* ── Core principle ── */
+    .why-principle {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 0.5px solid #e4e8f0;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .why-principle-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #a0aabe;
+      padding-top: .15rem;
+    }
+
+    .why-principle-text {
+      font-size: 13px;
+      color: #4a5a80;
+      line-height: 1.75;
+    }
+
+    .why-principle-text a {
+      color: #3d5a99;
+      text-decoration: none;
+      border-bottom: 1px solid #c8d4ea;
+      transition: border-color .15s, color .15s;
+    }
+
+    .why-principle-text a:hover {
+      color: #2e5bbc;
+      border-color: #3d5a99;
+    }
+
+    /* ── Important ── */
+    .why-important {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 0.5px solid #e4e8f0;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .why-important-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #c0905a;
+      padding-top: .15rem;
+    }
+
+    .why-important-text {
+      font-size: 13px;
+      color: #c0905a;
+      line-height: 1.75;
+    }
+
+    /* ── CTA line ── */
+    .why-cta {
+      font-size: 14px;
+      color: #1e2d5a;
+      font-family: 'DM Serif Display', serif;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .why-us-inner { padding: 2rem 1.5rem; }
+      .why-intro { grid-template-columns: 1fr; gap: 1.25rem; }
+      .why-principle,
+      .why-important { grid-template-columns: 1fr; gap: .5rem; }
+    }
+  
+
+/* ── footer ── */
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap');
+  .ft * { box-sizing: border-box; margin: 0; padding: 0; }
+  .ft { font-family: 'DM Sans', sans-serif; border-radius: var(--border-radius-lg); overflow: hidden; }
+
+  .ft-contact { background: #f0f0ee; padding: 2rem; text-align: center; }
+  .ft-contact-inner { max-width: 960px; margin: 0 auto; }
+  .ft-contact-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #888; margin-bottom: 1.25rem; }
+  .ft-phone { font-size: 15px; color: #222; margin-bottom: 0.5rem; }
+  .ft-phone .p1::before { content: "+386 "; }
+  .ft-phone .p2::before { content: "6x "; }
+  .ft-phone .p3::before { content: "xxx "; }
+  .ft-phone .p4::before { content: "xx xx"; }
+  .ft-phone a { color: #222; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+  .ft-phone a:hover { color: #1e2d5a; }
+  .ft-email-row { font-size: 14px; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 0.5rem; }
+  .ft-email-addr::before { content: "hello"; }
+  .ft-email-addr .at::before { content: "@"; }
+  .ft-email-addr .domain::before { content: "vvvvvv"; }
+  .ft-email-addr .dot::before { content: "."; }
+  .ft-email-addr .tld::before { content: "si"; }
+  .ft-email-addr { color: #1e4a99; cursor: pointer; font-size: 14px; text-decoration: none; }
+  .ft-email-addr:hover { color: #2e5bbc; }
+
+  /* GDPR box — justify inside */
+  .ft-gdpr-outer { display: flex; justify-content: center; margin-top: 0.75rem; }
+  .ft-gdpr-wrap { text-align: justify; border: 1px solid #d8d8d4; border-radius: 8px; padding: 1rem 1.25rem; background: #fafaf8; max-width: 520px; width: 100%; }
+  .ft-gdpr-short { font-size: 11px; color: #555; line-height: 1.7; text-align: justify; }
+  .ft-gdpr-long { display: none; font-size: 11px; color: #555; line-height: 1.7; text-align: justify; }
+  .ft-gdpr-long p { margin-bottom: 0.75rem; text-align: justify; }
+  .ft-gdpr-long p:last-child { margin-bottom: 0; }
+  .ft-learn { color: #1e4a99; cursor: pointer; text-decoration: underline; font-size: 11px; }
+  .ft-learn:hover { color: #2e5bbc; }
+
+  .ft-company-phone { color: #999; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
+  .ft-company-phone:hover { color: #fff; }
+  .ft-company-email { color: #999; text-decoration: none; }
+  .ft-company-email:hover { color: #fff; }
+
+  .ft-nav-bg { background: #2a2a2a; }
+  .ft-nav { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.5rem; padding: 2rem; max-width: 960px; margin: 0 auto; }
+  .ft-nav-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #fff; margin-bottom: 0.75rem; font-weight: 500; text-decoration: none; display: block; cursor: pointer; }
+  .ft-nav-label:hover { color: #7aaaff; }
+  .ft-nav-link { display: block; font-size: 11.5px; color: #bbb; margin-bottom: 5px; cursor: pointer; text-decoration: none; line-height: 1.6; }
+  .ft-nav-link:hover { color: #7aaaff; }
+
+  .ft-mid-bg { background: #1a1a1a; }
+  .ft-mid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; padding: 2rem; max-width: 960px; margin: 0 auto; }
+  .ft-label { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #666; margin-bottom: 1rem; }
+  .ft-text { font-size: 12px; color: #999; line-height: 1.9; }
+  .ft-company-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .ft-checklist { list-style: none; margin: 0.5rem 0 1rem; }
+  .ft-checklist li { font-size: 12px; color: #999; line-height: 1.8; display: flex; align-items: baseline; gap: 7px; }
+  .ft-check { color: #6b8c3e; font-size: 12px; flex-shrink: 0; }
+  .ft-strike { text-decoration: line-through; color: #777; }
+  .ft-legal-links { display: flex; gap: 1rem; margin-top: 0.5rem; }
+  .ft-legal-link { font-size: 12px; color: #fff; cursor: pointer; text-decoration: none; }
+  .ft-legal-link:hover { color: #7aaaff; }
+
+  .ft-copy-bg { background: #000; }
+  .ft-copy { padding: 1rem 2rem; display: flex; justify-content: center; }
+  .ft-copy-text { font-size: 11px; color: #888; }
+
+  @media (max-width: 768px) {
+    .ft-nav { display: none; }
+    .ft-mid { grid-template-columns: 1fr; }
+    .ft-company-inner { grid-template-columns: 1fr; }
+    .ft-gdpr-wrap { max-width: 100%; }
+  }
+
+  /* ── TOP SERVICES ── */
+  .top-services-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #a0aabe;
+    margin-bottom: 1rem;
+  }
+  .top-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .ts-card {
+    background: #fff;
+    border: 0.5px solid #e4e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  .ts-icon { color: #3d5a99; }
+  .ts-desc { font-size: 12.5px; color: #1e2d5a; line-height: 1.5; font-weight: 400; }
+  .ts-kpi  { font-size: 11px; color: #7a8ab0; line-height: 1.4; }
+  .ts-kpi { font-size: 11px; color: #7a8ab0; }
+  @media (max-width: 768px) { .top-services-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .top-services-grid { grid-template-columns: 1fr; } }
+
+  /* ── iPad font boost (768px–1024px) — excludes Hero ── */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .sec-label { font-size: 12px !important; }
+    .challenges-sublabel { font-size: 12px !important; }
+    .role { font-size: 14px !important; }
+    .context-text { font-size: 15px !important; }
+    .context-not-found { font-size: 14px !important; }
+    .card-num { font-size: 13px !important; }
+    .card-title { font-size: 16px !important; }
+    .card-text { font-size: 14px !important; }
+    .test-card-title { font-size: 16px !important; }
+    .test-card-text { font-size: 14px !important; }
+    .sec-tagline { font-size: 15px !important; }
+    .client-tag { font-size: 15px !important; }
+    .clients-note { font-size: 14px !important; }
+    .ts-desc { font-size: 14px !important; }
+    .ts-kpi { font-size: 13px !important; }
+    .approach-text { font-size: 15px !important; }
+    .why-principle-text { font-size: 15px !important; }
+    .why-cta { font-size: 15px !important; }
+    .mob-menu a { font-size: 16px !important; }
+    .ft-contact-label { font-size: 12px !important; }
+    .ft-phone { font-size: 17px !important; }
+    .ft-email-row { font-size: 16px !important; }
+    .ft-gdpr-short, .ft-gdpr-long { font-size: 13px !important; }
+    .ft-nav-label { font-size: 12px !important; }
+    .ft-nav-link { font-size: 13px !important; }
+    .ft-text { font-size: 14px !important; }
+    .ft-checklist li { font-size: 14px !important; }
+  }
+
+  /* ── FAQ section ── */
+  .faq-section { background: #f5f7fd; border-bottom: 0.5px solid #e4e8f0; }
+  .faq-inner { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
+  .faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0; border: 0.5px solid #e4e8f0; border-radius: 10px; overflow: hidden; }
+  .faq-item { background: #fff; border-bottom: 0.5px solid #e4e8f0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-question { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; cursor: pointer; gap: 1rem; }
+  .faq-question-text { font-size: 14px; font-weight: 500; color: #1e2d5a; line-height: 1.5; }
+  .faq-chevron { flex-shrink: 0; color: #a0aabe; transition: transform .25s ease; }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-answer { display: none; padding: 0 1.5rem 1rem; font-size: 13px; color: #4a5a80; line-height: 1.75; }
+  .faq-item.open .faq-answer { display: block; }
+  .faq-question:hover .faq-question-text { color: #3d5a99; }
+  @media (max-width: 768px) { .faq-inner { padding: 2rem 1.5rem; } .faq-question-text { font-size: 13px; } }
+  @media (min-width: 768px) and (max-width: 1024px) { .faq-question-text { font-size: 16px !important; } .faq-answer { font-size: 15px !important; } }
+
+
+
+    /* ── Section label links ── */
+    a.sec-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+      color: inherit;
+    }
+    a.sec-label .sec-label-arrow {
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity .15s, transform .15s;
+      margin-left: 5px;
+      color: #a0aabe;
+    }
+    a.sec-label:hover .sec-label-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ═══ header ═══ -->
+<!-- DESKTOP HEADER -->
+  <div class="dsk">
+    <div class="dsk-inner">
+    <div class="dsk-logo">
+      <a href="/" style="text-decoration:none;">
+        <span class="dsk-logo-name">VVVVVV</span>
+        <span class="dsk-logo-since">Since 2015</span>
+      </a>
+    </div>
+    <nav class="dsk-nav">
+      <span class="has-dropdown">
+        <a href="/en/challenges/">Challenges</a>
+        <div class="nav-dropdown">
+          <a href="/en/challenges/owner">Owner</a>
+          <a href="/en/challenges/startup_founder">Startup founder</a>
+          <a href="/en/challenges/individual_entrepreneur">Individual entrepreneur</a>
+          <a href="/en/challenges/ceo">CEO</a>
+        </div>
+      </span>
+      <span class="has-dropdown">
+        <a href="/en/services/">Services</a>
+        <div class="nav-dropdown">
+          <a href="/en/services/advertising">Advertising</a>
+          <a href="/en/services/marketing">Marketing</a>
+          <a href="/en/services/information_technology">Information Technology</a>
+        </div>
+      </span>
+      <span class="has-dropdown">
+        <a href="/en/free_app_test/">Free App Tests</a>
+        <div class="nav-dropdown">
+          <a href="/en/free_app_test/app1">App 1</a>
+          <a href="/en/free_app_test/app2">App 2</a>
+        </div>
+      </span>
+      <span class="has-dropdown">
+        <a href="/en/business_club/">Business Club</a>
+        <div class="nav-dropdown">
+          <a href="/en/business_club/async_mastermind">Async mastermind</a>
+          <a href="/en/business_club/support_partner">Support partner</a>
+        </div>
+      </span>
+      <span class="has-dropdown">
+        <a href="/en/practicum/">Practicum</a>
+        <div class="nav-dropdown">
+          <a href="/en/free_30_min_webinars">Free 30-min webinars</a>
+          <a href="/en/3_5_hour_seminars">3–5 hour seminars</a>
+          <a href="/en/long_term_programs">Long-term programs</a>
+        </div>
+      </span>
+      <span class="has-dropdown">
+        <a href="#">More</a>
+        <div class="nav-dropdown">
+          <a href="/en/about/">About</a>
+          <a href="/en/blog/">Blog</a>
+          <a href="/en/faq/">FAQ</a>
+          <a href="/en/price/">Price</a>
+        </div>
+      </span>
+    </nav>
+    <div class="dsk-right">
+
+      <a href="#contact-us" class="dsk-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      </a>
+      <a href="#contact-us" class="dsk-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <div class="lang-capsule">
+        <span class="lang-en">EN</span>
+        <span class="lang-si">SI</span>
+        <span class="lang-sep"></span>
+        <div class="lang-globe-btn" onclick="this.querySelector('.lang-dropdown').classList.toggle('open')">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          <div class="lang-dropdown">
+            <a class="active" href="#">English</a>
+            <a href="#">Slovenščina</a>
+            <a href="#">Italiano</a>
+            <a href="#">Deutsch</a>
+            <a href="#">Français</a>
+            <a href="#">Ελληνικά</a>
+            <a href="#">Hrvatski</a>
+            <a href="#">Srpski</a>
+            <a href="#">Magyar</a>
+            <a href="#">Nederlands</a>
+            <a href="#">Svenska</a>
+            <a href="#">Norsk</a>
+            <a href="#">Suomi</a>
+            <a href="#">日本語</a>
+            <a href="#">한국어</a>
+            <a href="#">中文</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div><!-- /dsk -->
+
+  <!-- MOBILE HEADER -->
+  <div class="mob">
+    <div class="mob-logo">
+      <span class="mob-logo-name">VVVVVV</span>
+      <span class="mob-logo-since">Since 2015</span>
+    </div>
+    <div class="mob-center">
+      <div onclick="document.querySelector('.mob-menu').classList.toggle('open')" style="display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:6px;">
+        <span style="display:block;width:22px;height:1.5px;background:#1e2d5a;"></span>
+        <span style="display:block;width:22px;height:1.5px;background:#1e2d5a;"></span>
+        <span style="display:block;width:22px;height:1.5px;background:#1e2d5a;"></span>
+      </div>
+    </div>
+    <div class="mob-right">
+      <a href="tel:+38600000000" class="mob-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      </a>
+      <a href="#contact-us" class="mob-icon">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <div class="lang-single" onclick="this.querySelector('.lang-single-dropdown').classList.toggle('open')">
+        <span class="lang-single-inner">EN</span>
+        <div class="lang-single-dropdown">
+          <a class="active" href="#">English</a>
+          <a href="#">Slovenščina</a>
+          <a href="#">Italiano</a>
+          <a href="#">Deutsch</a>
+          <a href="#">Français</a>
+          <a href="#">Ελληνικά</a>
+          <a href="#">Hrvatski</a>
+          <a href="#">Srpski</a>
+          <a href="#">Magyar</a>
+          <a href="#">Nederlands</a>
+          <a href="#">Svenska</a>
+          <a href="#">Norsk</a>
+          <a href="#">Suomi</a>
+          <a href="#">日本語</a>
+          <a href="#">한국어</a>
+          <a href="#">中文</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mob-menu">
+    <a href="/en/about/">About</a>
+    <a href="/en/challenges/">Challenges</a>
+    <a href="/en/services/">Services</a>
+    <a href="/en/free_app_test/">Free App Tests</a>
+    <a href="/en/business_club/">Business Club</a>
+    <a href="/en/practicum/">Practicum</a>
+    <a href="/en/blog/">Blog</a>
+    <a href="/en/faq/">FAQ</a>
+    <a href="/en/price/">Price</a>
+  </div>
+
+<!-- ═══ HeroSection ═══ -->
+<section class="hero">
+  <div class="container">
+    <div class="content">
+
+      <p class="eyebrow">Business Consulting &amp; IT</p>
+
+      <h1 class="headline">
+        We solve the challenges<br />
+        <span class="accent">leaders</span> face every day
+      </h1>
+
+      <p class="body-copy">
+        From family business owners to enterprise CEOs — tailored
+        strategies, technology, and mentoring that drive real results.
+      </p>
+
+      <div class="btn-group">
+        <a href="#challenges" class="btn btn-primary">
+          Pick your challenge and get our solution
+        </a>
+        <a href="#services" class="btn btn-secondary">Explore our services</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ privacy-section ═══ -->
+<section class="privacy">
+  <div class="privacy-inner">
+
+    <div class="privacy-title">
+      We respect your privacy and freedom:
+    </div>
+
+    <div class="privacy-list">
+      <span class="privacy-item">
+        <svg class="privacy-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        No cookies.
+      </span>
+      <span class="privacy-item">
+        <svg class="privacy-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        No personal data collected.
+      </span>
+      <span class="privacy-item">
+        <svg class="privacy-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        No Big Tech code.
+      </span>
+      <a href="#ft-legal" class="privacy-arrow-link">
+        <svg class="privacy-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ challenges-section ═══ -->
+<div id="challenges" class="challenges-section">
+  <div class="challenges">
+    <a href="/en/challenges/" class="sec-label">Challenges<svg class="sec-label-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <div class="challenges-sublabel">Choose your role</div>
+    <div class="roles" id="roles">
+      <span class="role" data-role="family-business-owner">Family business owner</span>
+      <span class="role" data-role="individual-entrepreneur">Individual entrepreneur</span>
+      <span class="role" data-role="ceo-micro-company">CEO micro company</span>
+      <span class="role" data-role="hr">HR</span>
+      <span class="role" data-role="cto">CTO</span>
+      <span class="role" data-role="product">Product</span>
+      <span class="role" data-role="startup-founder">Startup founder</span>
+      <span class="role" data-role="cmo">CMO</span>
+    </div>
+    <div class="contexts" id="contexts">
+      <div class="context-intro">Which of these situations applies to you right now?</div>
+      <div class="context-not-found">
+        If you haven't found anything suitable for your current challenges, just <a href="#contact-us">contact us</a>.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ services ═══ -->
+<div id="services" class="services-section">
+  <div class="services">
+    <a href="/en/services/" class="sec-label">What we do<svg class="sec-label-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+
+    <!-- TOP SERVICES -->
+    <div class="top-services-label">Top Services</div>
+    <div class="top-services-grid">
+
+      <div class="ts-card">
+        <div class="ts-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <div class="ts-desc">Review of marketing and advertising materials (websites, landing pages, presentations)</div>
+        <div class="ts-kpi">KPI — increasing conversion</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2"/>
+          </svg>
+        </div>
+        <div class="ts-desc">Description, optimization, and automation of company business processes</div>
+        <div class="ts-kpi">KPI — increasing the speed of operations that lead to strategic goals</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/>
+          </svg>
+        </div>
+        <div class="ts-desc">Business analysis for IT development (websites, web and mobile applications)</div>
+        <div class="ts-kpi">KPI — reducing the time and cost of developing IT solutions</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div class="ts-desc">Agile development of IT solutions — including very simple ones that address a single business challenge</div>
+        <div class="ts-kpi">KPI — drastically faster and cheaper than traditional development</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+          </svg>
+        </div>
+        <div class="ts-desc">Training and mentoring for entrepreneurs, employees, and corporate leadership</div>
+        <div class="ts-kpi">KPI — profit growth driven by productivity gains</div>
+      </div>
+
+      <div class="ts-card">
+        <div class="ts-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/>
+            <line x1="6" y1="6" x2="10" y2="10"/><line x1="18" y1="6" x2="14" y2="10"/><line x1="6" y1="18" x2="10" y2="14"/><line x1="18" y1="18" x2="14" y2="14"/>
+          </svg>
+        </div>
+        <div class="ts-desc">Mastermind groups for members of our business club</div>
+        <div class="ts-kpi">KPI — multiple acceleration of goal achievement through exchange of best practices</div>
+      </div>
+
+    </div>
+
+    <!-- ALL OUR SERVICES -->
+    <div class="top-services-label" style="margin-top:2rem;">All Our Services</div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-num">01</div>
+        <a href="/services/it-development" class="card-link">
+          <div class="card-title">IT &amp; Development</div>
+          <div class="card-text">Analysis, development, testing for your business systems</div>
+        </a>
+      </div>
+      <div class="card">
+        <div class="card-num">02</div>
+        <a href="/services/business-consulting" class="card-link">
+          <div class="card-title">Business Consulting</div>
+          <div class="card-text">Strategy and operational guidance for sustainable growth</div>
+        </a>
+      </div>
+      <div class="card">
+        <div class="card-num">03</div>
+        <a href="/services/marketing" class="card-link">
+          <div class="card-title">Marketing</div>
+          <div class="card-text">Advertising and marketing that reaches the right audience</div>
+        </a>
+      </div>
+      <div class="card">
+        <div class="card-num">04</div>
+        <a href="/services/acceleration" class="card-link">
+          <div class="card-title">Acceleration</div>
+          <div class="card-text">Training and mentoring to fast-track your business</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ free-app-tests ═══ -->
+<div class="free-tests">
+  <div class="free-tests-inner">
+    <a href="/en/free_app_test/" class="sec-label">Free App Tests<svg class="sec-label-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <div class="tests-grid">
+
+      <a href="/tests/app1" class="test-card">
+        <span class="test-card-tag">Free</span>
+        <div class="test-card-title">App 1</div>
+        <div class="test-card-desc">Short description of what this diagnostic test reveals about your business.</div>
+      </a>
+
+      <a href="/tests/app2" class="test-card">
+        <span class="test-card-tag">Free</span>
+        <div class="test-card-title">App 2</div>
+        <div class="test-card-desc">Short description of what this diagnostic test reveals about your business.</div>
+      </a>
+
+      <a href="/tests/app3" class="test-card">
+        <span class="test-card-tag">Free</span>
+        <div class="test-card-title">App 3</div>
+        <div class="test-card-desc">Short description of what this diagnostic test reveals about your business.</div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ business-club ═══ -->
+<div class="club">
+  <div class="club-inner">
+
+    <div class="club-header">
+      <a href="/en/business_club/" class="sec-label">Business Club<svg class="sec-label-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <span class="club-tagline">Collaborate. Share. Grow.</span>
+    </div>
+
+    <div class="club-items">
+
+      <!-- Peer-to-peer: two connected people -->
+      <a href="/club/peer-partnership" class="club-item">
+        <svg class="club-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="7" cy="8" r="3"/>
+          <circle cx="17" cy="8" r="3"/>
+          <path d="M1 20c0-3 2.5-5 6-5"/>
+          <path d="M23 20c0-3-2.5-5-6-5"/>
+          <path d="M9 15h6"/>
+        </svg>
+        <span class="club-item-title">Peer-to-peer partnership</span>
+      </a>
+
+      <!-- Live mastermind: hub/network -->
+      <a href="/club/live-mastermind" class="club-item">
+        <svg class="club-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"/>
+          <circle cx="4"  cy="5"  r="2"/>
+          <circle cx="20" cy="5"  r="2"/>
+          <circle cx="4"  cy="19" r="2"/>
+          <circle cx="20" cy="19" r="2"/>
+          <line x1="6"  y1="6"  x2="10" y2="10"/>
+          <line x1="18" y1="6"  x2="14" y2="10"/>
+          <line x1="6"  y1="18" x2="10" y2="14"/>
+          <line x1="18" y1="18" x2="14" y2="14"/>
+        </svg>
+        <span class="club-item-title">Live mastermind groups</span>
+      </a>
+
+      <!-- Async mastermind: message + clock -->
+      <a href="/club/async-mastermind" class="club-item">
+        <svg class="club-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+          <circle cx="15.5" cy="9.5" r="2.5" fill="white" stroke="currentColor" stroke-width="1.5"/>
+          <polyline points="15.5 8.5 15.5 9.5 16.2 10.2"/>
+        </svg>
+        <span class="club-item-title">Async mastermind</span>
+      </a>
+
+      <!-- Solutions Marketplace: grid/store -->
+      <a href="/club/marketplace" class="club-item">
+        <svg class="club-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2"  y="2"  width="9" height="9" rx="1.5"/>
+          <rect x="13" y="2"  width="9" height="9" rx="1.5"/>
+          <rect x="2"  y="13" width="9" height="9" rx="1.5"/>
+          <rect x="13" y="13" width="9" height="9" rx="1.5"/>
+        </svg>
+        <span class="club-item-title">Solutions Marketplace</span>
+      </a>
+
+      <!-- Events: calendar -->
+      <a href="/club/events" class="club-item">
+        <svg class="club-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8"  y1="2" x2="8"  y2="6"/>
+          <line x1="3"  y1="10" x2="21" y2="10"/>
+          <circle cx="8"  cy="15" r="1" fill="currentColor"/>
+          <circle cx="12" cy="15" r="1" fill="currentColor"/>
+          <circle cx="16" cy="15" r="1" fill="currentColor"/>
+        </svg>
+        <span class="club-item-title">Events</span>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ practicum ═══ -->
+<div class="practicum">
+  <div class="practicum-inner">
+
+    <div class="practicum-header">
+      <a href="/en/practicum/" class="sec-label">Practicum<svg class="sec-label-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <span class="practicum-tagline">Learn. Practice. Apply.</span>
+    </div>
+
+    <div class="practicum-items">
+
+      <!-- Level 1: one bar -->
+      <a href="/practicum/webinars-30min" class="practicum-item">
+        <svg class="p-icon" width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect x="1"  y="15" width="4" height="6" rx="1" fill="#3d5a99"/>
+        </svg>
+        <span class="practicum-item-title">Free 30-min webinars</span>
+        <span class="practicum-item-badge badge-free">Free</span>
+        <svg class="practicum-item-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <!-- Level 2: two bars -->
+      <a href="/practicum/seminars" class="practicum-item">
+        <svg class="p-icon" width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect x="1"  y="15" width="4" height="6" rx="1" fill="#3d5a99"/>
+          <rect x="7"  y="9"  width="4" height="12" rx="1" fill="#3d5a99"/>
+        </svg>
+        <span class="practicum-item-title">From 3 to 5 hour seminars (in person or online)</span>
+        <span class="practicum-item-badge badge-deep">Deep dive</span>
+        <svg class="practicum-item-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <!-- Level 3: three bars -->
+      <a href="/practicum/long-term" class="practicum-item">
+        <svg class="p-icon" width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <rect x="1"  y="15" width="4" height="6" rx="1" fill="#3d5a99"/>
+          <rect x="7"  y="9"  width="4" height="12" rx="1" fill="#3d5a99"/>
+          <rect x="13" y="3"  width="4" height="18" rx="1" fill="#3d5a99"/>
+        </svg>
+        <span class="practicum-item-title">Long-term programs</span>
+        <span class="practicum-item-badge badge-pro">Pro</span>
+        <svg class="practicum-item-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ clients ═══ -->
+<div class="clients">
+  <div class="clients-inner">
+    <div class="sec-header">
+      <div class="sec-label">What do our clients do?</div>
+      <span class="sec-tagline">From startup entrepreneurs to state-owned corporations</span>
+    </div>
+    <div class="clients-cloud">
+      <span class="client-tag">IT development</span>
+      <span class="client-tag">Telecommunications</span>
+      <span class="client-tag">Banks</span>
+      <span class="client-tag">Construction</span>
+      <span class="client-tag">Manufacturing</span>
+      <span class="client-tag">E-commerce</span>
+      <span class="client-tag">Marketplaces</span>
+      <span class="client-tag">Tourism</span>
+      <span class="client-tag">Fintech</span>
+      <span class="client-tag">Marketing agencies</span>
+      <span class="client-tag">Media</span>
+      <span class="client-tag">Big pharma</span>
+      <span class="client-tag">SaaS platforms</span>
+      <span class="client-tag">HR</span>
+      <span class="client-tag">B2C / B2B / B2G / B2E sales</span>
+      <span class="client-tag-etc">etc.</span>
+    </div>
+
+    <p class="clients-note">We respect the privacy and confidentiality of our clients and do not publish references publicly, especially with contact persons' details. You will have the opportunity to get acquainted with our references at the first meeting.</p>
+  </div>
+</div>
+
+<!-- ═══ blog ═══ -->
+<div class="blog">
+  <div class="blog-inner">
+    <div class="sec-header">
+      <a href="/en/blog/" class="sec-label">Blog<svg class="sec-label-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <span class="sec-tagline">Ideas. Insights. Experience.</span>
+    </div>
+    <div class="blog-grid">
+
+      <a href="/blog/post-1" class="blog-card">
+        <div class="blog-card-title">Why most family businesses plateau — and how to break through</div>
+      </a>
+
+      <a href="/blog/post-2" class="blog-card">
+        <div class="blog-card-title">The IT systems that quietly cost you money every month</div>
+      </a>
+
+      <a href="/blog/post-3" class="blog-card">
+        <div class="blog-card-title">What separates leaders who scale from those who stall</div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ why-us ═══ -->
+<div class="why-us">
+  <div class="why-us-inner">
+
+    <div class="sec-label">Why Us?</div>
+
+    <!-- Intro: 3 columns -->
+    <div class="why-intro">
+      <div class="why-intro-item">
+        <strong>Team &amp; scale</strong>
+        We are a small team that knows how to scale quickly using the network principles adopted by global corporations.
+      </div>
+      <div class="why-intro-item">
+        <strong>Responsibility</strong>
+        When solving client challenges, we bring in trusted professionals from the relevant fields and countries. We take full responsibility for their actions — as if they were our own.
+      </div>
+      <div class="why-intro-item">
+        <strong>Experience</strong>
+        Our core team has over 30 years of business experience, working on both local and global projects.
+      </div>
+    </div>
+
+    <!-- Approaches: choose one of three -->
+    <div class="why-approaches">
+      <div class="why-sub-label">Our approaches</div>
+      <div class="approaches-row" id="approaches">
+        <div class="approach" onclick="selectApproach(this)">
+          <span class="approach-text">We build a solution for you.</span>
+        </div>
+        <div class="approach-vs">VS</div>
+        <div class="approach" onclick="selectApproach(this)">
+          <span class="approach-text">We teach you how to create the solution yourself — and you will.</span>
+        </div>
+        <div class="approach-vs">VS</div>
+        <div class="approach" onclick="selectApproach(this)">
+          <span class="approach-text">We find ready-made solutions within our business club and beyond.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core principle -->
+    <div class="why-principle">
+      <div class="why-principle-label">Our core principle</div>
+      <div class="why-principle-text">
+        We build solutions within a post-informational paradigm, using probabilistic management methods. This allows to move along a trajectory that truly leads to achieving strategic goals. <a href="/about/core-principle">Learn more</a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="why-cta">
+      Let's discuss what solutions we have or can develop for your challenges.
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ FAQ ═══ -->
+<div id="faq" class="faq-section">
+  <div class="faq-inner">
+    <div class="sec-label">FAQ</div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-question-text">What types of businesses do you work with?</span>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">We work with a wide range of clients — from individual entrepreneurs and family businesses to micro-companies and startup founders. Our services are tailored to the specific challenges of each role, whether you're a CEO, CTO, CMO, HR lead, or a product manager.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-question-text">How does the first engagement typically begin?</span>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">It starts with a short introductory meeting — typically 30 minutes — where we discuss your current situation, challenges, and goals. Based on that, we propose the most suitable format of collaboration: a one-time consultation, a project engagement, or an ongoing advisory relationship.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-question-text">Do you work remotely or in person?</span>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">Both. Most of our work is done remotely via video calls, which makes it convenient for clients across different cities and countries. For certain projects — workshops, on-site process audits, or team sessions — we can arrange in-person meetings as well.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-question-text">How long does a typical project take?</span>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">It depends on the scope. A focused consultation or review can be completed in a few hours. A strategy project typically spans 2–6 weeks. Ongoing advisory or mentoring relationships often run for several months. We always define scope and timelines clearly before starting.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-question-text">Can I see references or client examples?</span>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">We respect the privacy of our clients and do not publish references or case studies publicly. You will have the opportunity to learn more about our experience and relevant project examples during our first conversation.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-question-text">What is the Business Club and who is it for?</span>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">The Business Club is a community for business owners, founders, and executives who want to grow through peer exchange and structured support. Members get access to async mastermind groups, support partner sessions, and exclusive resources. It's designed for people who want more than just advice — they want accountability and a network.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-question-text">How is your pricing structured?</span>
+          <svg class="faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer">Pricing depends on the type and scope of engagement. We offer fixed-price packages for defined deliverables and hourly or retainer models for ongoing work. Full details are available on our Price page, and we're happy to discuss what makes sense for your specific situation.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ footer ═══ -->
+<div class="ft">
+
+  <!-- CONTACT -->
+  <div class="ft-contact" id="contact-us">
+    <div class="ft-contact-inner">
+      <div class="ft-contact-label">Contact us</div>
+      <div class="ft-phone">
+        <a href="tel:+38600000000">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <span class="p1"></span><span class="p2"></span><span class="p3"></span><span class="p4"></span>
+        </a>
+      </div>
+      <div style="display:flex;justify-content:center;margin-bottom:0;">
+        <a href="/cdn-cgi/l/email-protection#274f424b4b486751515151515109544e185452454d4244531a6e4956524e555e0215174155484a021517504245544e5342014548435e1a6f424b4b480215640217660217666e02151741485249430215175e485255021517504245544e53420215174649430215175048524b430215174b4e4c420215175348021517434e5444525454021517460215175748534249534e464b02151744484b4b4645485546534e484909021766021766" class="ft-email-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e4a99" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span class="ft-email-addr"><span class="at"></span><span class="domain"></span><span class="dot"></span><span class="tld"></span></span>
+        </a>
+      </div>
+      <div class="ft-gdpr-outer">
+        <div class="ft-gdpr-wrap">
+          <div class="ft-gdpr-short" id="gdpr-short">
+            By sending an email to this address, you initiate communication yourself. We process your data pursuant to Article 6(1)(f) GDPR solely to respond to your inquiry. Separate consent under GDPR is not required, as the contact was initiated by you. We do not use your address for marketing purposes. You may cease communication at any time. <span class="ft-learn" onclick="document.getElementById('gdpr-short').style.display='none';document.getElementById('gdpr-long').style.display='block';">Learn more</span>
+          </div>
+          <div class="ft-gdpr-long" id="gdpr-long">
+            <p>By sending an email to this address, you initiate correspondence for the purpose of addressing your request. We process your data based on our legitimate interest in providing a response (Art. 6(1)(f) GDPR). No separate consent under the GDPR is required, as the contact is initiated by you. We use your address solely for communication regarding the substance of your inquiry and do not include it in any marketing or newsletter distributions.</p>
+            <p>You have the right to object to further processing at any time by replying to our email or using the link in our signature. In such a case, we will review your objection and cease processing unless we have compelling legitimate grounds to continue.</p>
+            <p>For more details on your rights and our data retention periods, please see our <a class="ft-learn" href="#">Privacy Policy</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div class="ft-nav-bg">
+    <div class="ft-nav">
+      <div>
+        <a class="ft-nav-label" href="#">Main</a>
+        <a class="ft-nav-link" href="#">About</a>
+        <a class="ft-nav-link" href="#">Blog</a>
+        <a class="ft-nav-link" href="#">FAQ</a>
+        <a class="ft-nav-link" href="#">Price</a>
+      </div>
+      <div>
+        <a class="ft-nav-label" href="#">Challenges</a>
+        <a class="ft-nav-link" href="#">Owner</a>
+        <a class="ft-nav-link" href="#">CEO</a>
+        <a class="ft-nav-link" href="#">Startup founder</a>
+        <a class="ft-nav-link" href="#">Entrepreneur</a>
+        <a class="ft-nav-link" href="#">CMO</a>
+        <a class="ft-nav-link" href="#">CTO</a>
+      </div>
+      <div>
+        <a class="ft-nav-label" href="#">Services</a>
+        <a class="ft-nav-link" href="#">Advertising</a>
+        <a class="ft-nav-link" href="#">Marketing</a>
+        <a class="ft-nav-link" href="#">IT</a>
+        <a class="ft-nav-link" href="#">Business solutions</a>
+      </div>
+      <div>
+        <a class="ft-nav-label" href="#">Free app tests</a>
+        <a class="ft-nav-link" href="#">App 1</a>
+        <a class="ft-nav-link" href="#">App 2</a>
+        <a class="ft-nav-link" href="#">App 3</a>
+      </div>
+      <div>
+        <a class="ft-nav-label" href="#">Business Club</a>
+        <a class="ft-nav-link" href="#">Peer-to-peer partnership</a>
+        <a class="ft-nav-link" href="#">Live mastermind groups</a>
+        <a class="ft-nav-link" href="#">Async mastermind</a>
+        <a class="ft-nav-link" href="#">Solutions Marketplace</a>
+        <a class="ft-nav-link" href="#">Events</a>
+      </div>
+      <div>
+        <a class="ft-nav-label" href="#">Practicum</a>
+        <a class="ft-nav-link" href="#">Free 30-min webinars</a>
+        <a class="ft-nav-link" href="#">3–5 hour webinars</a>
+        <a class="ft-nav-link" href="#">Long-term programs</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPANY + LEGAL -->
+  <div class="ft-mid-bg">
+    <div class="ft-mid">
+      <div>
+        <div class="ft-label">Company</div>
+        <div class="ft-company-inner">
+          <div class="ft-text">
+            VVVVVV d.o.o.<br>
+            Slovenska cesta 1<br>
+            1000 Ljubljana<br>
+            Slovenia<br><br>
+            <a href="#contact-us" class="ft-company-phone">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              +386 6x xxx xx xx
+            </a><br>
+            <a href="#contact-us" class="ft-company-email ft-email-addr"><span class="at"></span><span class="domain"></span><span class="dot"></span><span class="tld"></span></a>
+          </div>
+          <div class="ft-text">
+            Registered in Slovenia (EU)<br>
+            REG. no: 23232324<br>
+            TAX no.: 23232324<br>
+            VAT no.: SI23232324
+          </div>
+        </div>
+      </div>
+      <div id="ft-legal">
+        <div class="ft-text" style="margin-bottom:0.5rem;">We respect your privacy and freedom, which is why our website is built in the coffee-without style:</div>
+        <ul class="ft-checklist">
+          <li><span class="ft-check">✓</span> No cookies.</li>
+          <li><span class="ft-check">✓</span> No personal data collected.</li>
+          <li><span class="ft-check">✓</span> No third-party Big Tech code: <span class="ft-strike">pixels, analytics, tracking, tags.</span></li>
+          <li><span class="ft-check">✓</span> No AI.</li>
+          <li><span class="ft-check">✓</span> Fonts hosted locally.</li>
+          <li><span class="ft-check">✓</span> Hosted on GitHub Pages (technical logs may apply per GitHub's policy).</li>
+        </ul>
+        <div class="ft-legal-links">
+          <a class="ft-legal-link" href="#">Privacy Policy</a>
+          <a class="ft-legal-link" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="ft-copy-bg">
+    <div class="ft-copy">
+      <span class="ft-copy-text">© 2015 — 2026 VVVVVV d.o.o. All rights reserved.</span>
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ── challenges-section ── */
+const contextData = {
+    "family-business-owner": [
+      { text: "You run a business your parents built — the next generation wants in, but roles and expectations are still unclear.", url: "/challenges/family-business-owner/succession" },
+      { text: "Your most trusted manager left last month and you realised the entire operation was running on his knowledge, not documented processes.", url: "/challenges/family-business-owner/key-person-risk" },
+      { text: "Revenue has been stable for three years, but margins keep shrinking and you can't identify exactly where the money is going.", url: "/challenges/family-business-owner/margin-erosion" },
+      { text: "Every time you try to delegate, something goes wrong — and you're not sure if it's the people or the way you hand things over.", url: "/challenges/family-business-owner/delegation" },
+    ],
+    "individual-entrepreneur": [
+      { text: "You landed your biggest client ever — and then realised your current setup can't handle the workload without breaking.", url: "/challenges/individual-entrepreneur/scaling-capacity" },
+      { text: "You've been freelancing for years and want to build something that earns without you having to be present every day.", url: "/challenges/individual-entrepreneur/productize" },
+      { text: "Your income is unpredictable month to month and you need a more stable, recurring revenue model.", url: "/challenges/individual-entrepreneur/recurring-revenue" },
+    ],
+    "ceo-micro-company": [
+      { text: "You're stuck in operational mode — approvals, firefighting, meetings — and haven't worked on strategy in months.", url: "/challenges/ceo-micro-company/operational-trap" },
+      { text: "Your team is doing their best but the company isn't moving forward — and you're not sure if it's a people problem or a process problem.", url: "/challenges/ceo-micro-company/team-performance" },
+      { text: "You've decided to expand into a new market but have no clear picture of what it will actually take to win there.", url: "/challenges/ceo-micro-company/market-expansion" },
+      { text: "Investors are asking for a growth plan and you've realised you don't have one you actually believe in.", url: "/challenges/ceo-micro-company/growth-plan" },
+    ],
+    "hr": [
+      { text: "You've been asked to reduce time-to-hire by 40% without increasing headcount in the HR team.", url: "/challenges/hr/hiring-efficiency" },
+      { text: "Turnover in one department keeps spiking, exit interviews say nothing useful, and the manager insists everything is fine.", url: "/challenges/hr/turnover" },
+      { text: "Leadership wants a people strategy aligned to a 3-year business plan — and you have two weeks to present it.", url: "/challenges/hr/people-strategy" },
+    ],
+    "cto": [
+      { text: "Your team keeps shipping features but the product feels more fragile with every release — tech debt is becoming a real business risk.", url: "/challenges/cto/tech-debt" },
+      { text: "You've just taken over as CTO and discovered the architecture can't support the growth targets the CEO has committed to.", url: "/challenges/cto/architecture-gap" },
+      { text: "You need to scale the engineering team from 8 to 25 in 12 months without destroying the culture and code quality you've built.", url: "/challenges/cto/team-scaling" },
+    ],
+    "product": [
+      { text: "Your roadmap is packed but the metrics aren't moving — stakeholders are questioning whether the team is working on the right things.", url: "/challenges/product/roadmap-focus" },
+      { text: "You have qualitative feedback from users and quantitative data from analytics — but they're telling completely different stories.", url: "/challenges/product/insight-conflict" },
+      { text: "A competitor launched a feature your users requested two years ago — and your team is asking why you didn't build it first.", url: "/challenges/product/competitive-gap" },
+    ],
+    "startup-founder": [
+      { text: "You have traction but not enough to raise your next round — and your runway is 6 months.", url: "/challenges/startup-founder/fundraising" },
+      { text: "You've found product-market fit in one segment but expanding to the next segment isn't working the same way.", url: "/challenges/startup-founder/pmf-expansion" },
+      { text: "Your co-founder and you disagree on the direction of the company and it's starting to affect the team.", url: "/challenges/startup-founder/cofounder-conflict" },
+    ],
+    "cmo": [
+      { text: "Your CAC has doubled in 18 months and the channels that worked before are delivering diminishing returns.", url: "/challenges/cmo/cac-increase" },
+      { text: "Leadership is asking for marketing attribution data but your current stack makes it nearly impossible to connect spend to revenue.", url: "/challenges/cmo/attribution" },
+      { text: "You're entering a new market and need to build brand awareness from zero with a fraction of what local competitors spend.", url: "/challenges/cmo/new-market-brand" },
+    ],
+  };
+
+  const roleLabels = {
+    'family-business-owner': 'Family business owner',
+    'individual-entrepreneur': 'Individual entrepreneur',
+    'ceo-micro-company': 'CEO micro company',
+    'hr': 'HR',
+    'cto': 'CTO',
+    'product': 'Product',
+    'startup-founder': 'Startup founder',
+    'cmo': 'CMO',
+  };
+
+  const rolesEl = document.getElementById('roles');
+  const contextsEl = document.getElementById('contexts');
+
+  rolesEl.addEventListener('click', function(e) {
+    if (e.target.closest('.role-reset')) { resetRoles(); return; }
+    const roleEl = e.target.closest('[data-role]');
+    if (!roleEl) return;
+    selectRole(roleEl.dataset.role, roleLabels[roleEl.dataset.role]);
+  });
+
+  function selectRole(role, label) {
+    rolesEl.querySelectorAll('[data-role]').forEach(r => {
+      if (r.dataset.role !== role) {
+        r.style.display = 'none';
+      } else {
+        r.classList.add('selected');
+        r.innerHTML = `${label}<span class="role-reset" title="Clear">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <line x1="1" y1="1" x2="9" y2="9"/><line x1="9" y1="1" x2="1" y2="9"/>
+          </svg></span>`;
+      }
+    });
+
+    contextsEl.querySelectorAll('.context-item').forEach(el => el.remove());
+
+    const notFound = contextsEl.querySelector('.context-not-found');
+
+    (contextData[role] || []).forEach(item => {
+      const a = document.createElement('a');
+      a.className = 'context-item';
+      a.href = item.url;
+      a.target = '_blank';
+      a.innerHTML = `
+        <span class="context-dot"></span>
+        <span class="context-text">${item.text}</span>
+        <svg class="context-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>`;
+      contextsEl.insertBefore(a, notFound);
+    });
+
+    contextsEl.classList.add('visible');
+  }
+
+  function resetRoles() {
+    rolesEl.querySelectorAll('[data-role]').forEach(r => {
+      r.style.display = '';
+      r.classList.remove('selected');
+      r.innerHTML = roleLabels[r.dataset.role];
+    });
+    contextsEl.classList.remove('visible');
+  }
+
+  /* ── approaches ── */
+  function selectApproach(el) {
+    document.querySelectorAll('#approaches .approach').forEach(a => a.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+
+  /* ── iPad/tablet dropdown fix ── */
+  (function() {
+    var isTablet = window.matchMedia('(hover: none) and (pointer: coarse) and (min-width: 768px)').matches;
+    if (!isTablet) return;
+    document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var parent = link.parentElement;
+        var isOpen = parent.classList.contains('open');
+        document.querySelectorAll('.has-dropdown.open').forEach(function(el) {
+          el.classList.remove('open');
+        });
+        if (!isOpen) parent.classList.add('open');
+      });
+    });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.has-dropdown')) {
+        document.querySelectorAll('.has-dropdown.open').forEach(function(el) {
+          el.classList.remove('open');
+        });
+      }
+    });
+  })();
+
+</script>
+</body>
+</html>
