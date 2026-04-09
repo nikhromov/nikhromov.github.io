@@ -10,9 +10,91 @@
   <meta property="og:title" content="VVVVVV — Business Consulting &amp; IT" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vvvvvv.si/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500&family=Outfit:wght@300;400&display=swap" rel="stylesheet" />
+  <!--
+    TYPEFACES USED ON THIS PAGE — all licensed under SIL Open Font License 1.1
+    https://openfontlicense.org
+
+    Inter            · © 2016–2020 The Inter Project Authors (Rasmus Andersson)
+                       "Inter" is a trademark of Rasmus Andersson.
+                       https://github.com/rsms/inter
+
+    DM Sans          · © 2014 The DM Sans Project Authors
+                       Designed by Colophon Foundry, commissioned by Google.
+                       https://github.com/googlefonts/dm-fonts
+
+    DM Serif Display · © 2014–2017 Adobe Systems Incorporated, with Reserved Font Name "Source".
+                       © 2019 Google LLC. Derived from Adobe Source Serif Pro.
+                       Designed by Colophon Foundry, commissioned by Google.
+                       https://github.com/googlefonts/dm-fonts
+
+    Outfit           · © 2021 The Outfit Project Authors (Rodrigo Fuenzalida)
+                       https://github.com/Outfitio/Outfit-Fonts
+  -->
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/Inter-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url('/fonts/Inter-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url('/fonts/DMSans-Light.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/DMSans-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'DM Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url('/fonts/DMSans-Medium.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'DM Serif Display';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/DMSerifDisplay-Regular.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'DM Serif Display';
+      font-style: italic;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/DMSerifDisplay-Italic.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Outfit';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url('/fonts/Outfit-Light.woff2') format('woff2');
+    }
+    @font-face {
+      font-family: 'Outfit';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/fonts/Outfit-Regular.woff2') format('woff2');
+    }
+  </style>
   <style>
 
     /* ══ GLOBAL OVERRIDES ══ */
@@ -396,7 +478,7 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: #f5f7fd; color: #1e2d5a; }
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap');
+  /* DM Sans loaded via local @font-face (see <head>) */
 
   .challenges-section { background: #fff; border-bottom: 0.5px solid #e4e8f0; }
   .challenges { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; }
@@ -1144,7 +1226,7 @@
 
 /* ── footer ── */
 
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display&display=swap');
+  /* DM Sans + DM Serif Display loaded via local @font-face (see <head>) */
   .ft * { box-sizing: border-box; margin: 0; padding: 0; }
   .ft { font-family: 'DM Sans', sans-serif; border-radius: var(--border-radius-lg); overflow: hidden; }
 
@@ -1179,7 +1261,7 @@
 
   .ft-company-phone { color: #999; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
   .ft-company-phone:hover { color: #fff; }
-  .ft-company-email { color: #999; text-decoration: none; }
+  .ft-company-email { color: #999; text-decoration: none; font-size: 12px; font-weight: 400; }
   .ft-company-email:hover { color: #fff; }
 
   .ft-nav-bg { background: #2a2a2a; }
@@ -2008,7 +2090,7 @@
         </a>
       </div>
       <div style="display:flex;justify-content:center;margin-bottom:0;">
-        <a href="/cdn-cgi/l/email-protection#274f424b4b486751515151515109544e185452454d4244531a6e4956524e555e0215174155484a021517504245544e5342014548435e1a6f424b4b480215640217660217666e02151741485249430215175e485255021517504245544e53420215174649430215175048524b430215174b4e4c420215175348021517434e5444525454021517460215175748534249534e464b02151744484b4b4645485546534e484909021766021766" class="ft-email-row">
+        <a href="#contact-us" class="ft-email-row">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1e4a99" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <span class="ft-email-addr"><span class="at"></span><span class="domain"></span><span class="dot"></span><span class="tld"></span></span>
         </a>
@@ -2087,7 +2169,7 @@
             VVVVVV d.o.o.<br>
             Slovenska cesta 1<br>
             1000 Ljubljana<br>
-            Slovenia<br><br>
+            Slovenia<br>
             <a href="#contact-us" class="ft-company-phone">
               <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
               +386 6x xxx xx xx
@@ -2103,6 +2185,7 @@
         </div>
       </div>
       <div id="ft-legal">
+        <div class="ft-label">Legal</div>
         <div class="ft-text" style="margin-bottom:0.5rem;">We respect your privacy and freedom, which is why our website is built in the coffee-without style:</div>
         <ul class="ft-checklist">
           <li><span class="ft-check">✓</span> No cookies.</li>
